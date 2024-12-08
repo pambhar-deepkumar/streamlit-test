@@ -18,7 +18,7 @@ def quote_price():
         if not df.empty and 'Item Description' in df.columns:
             rows_to_select = st.multiselect("Select the products you want to quote", df['Item Description'])
             selected_data = df[df['Item Description'].isin(rows_to_select)]
-            price_up_range = st.radio("Select the Price Up range", (35, 45, 55, 75))
+            price_up_range = st.radio("Select the Price Up range", (35, 45, 55, 75,125))
 
             if st.button('Submit'):
                 msg_str = ""
